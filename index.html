@@ -1,0 +1,107 @@
+<!-- /////////// -->
+<!-- Mine Sweepr -->
+<!-- /////////// -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mine Sweeper!</title>
+    <link rel="stylesheet" href="css/minesweeper.css">
+    <link rel="icon" href="img/favicon3.ico" type="image/gif" sizes="16x16">
+</head>
+
+<body onload="initGame()" oncontextmenu="return false">
+    <section class="page-title">
+        <h3>It's 1991 and we're playing</h3>
+        <h1><span class="fontawesome-star star"></span> <span>MINE SWEEPER</span> <span class="fontawesome-star star"></span></h1>
+    </section>
+
+    <!-- Header & drop down menu -->
+    <div class="header-container">
+        <div class="header-inner-container">
+            <div class="dropdown">
+                <button onclick="chooseLevel()" class="dropbtn">Change Level</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <div onclick="changeLevel(0)"> Easy (5x5) 2 mines</div>
+                    <div onclick="changeLevel(1)"> Intermediate (6x6) 5 mines</div>
+                    <div onclick="changeLevel(2)"> Hard (8x8) 15 mines</div>
+                    <div onclick="changeLevel(3)"> Hardcore (10X10) 20 mines</div>
+                </div>
+            </div>
+            <button onclick="activateHintMode()" id="hint" class="dropbtn">Use Hint</button>
+        </div>
+    </div>
+
+    <!-- main board container -->
+    <div class="board-container blur">
+        <div class="board-inner-container">
+            <div class="stats">
+                <span class="timer time">TIME<br><span class="time-counter">000</span></span>
+                <div ondblclick="initGame()" id="smiley-container" class="smiley-container">
+                    <img id="smiley" ondblclick="initGame()" onclick="toggleSmiley()" class="smiley" src="img/smileyDefault.png">
+                </div>
+                <span class="mines">MINES<br><span class="mines-counter">000</span></span>
+            </div>
+            <table class="board-table" border="1">
+                <tbody class="board"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Best Scores -->
+    <div class="best-results-container">
+        <div class="best-results">
+            <table>
+                <!-- class="best" -->
+                <tr>
+                    <th class="best title">Level</th>
+                    <th class="best title">Best Time</th>
+                    <th class="best title">Best Player</th>
+                </tr>
+                <tr>
+                    <td class="best level">Easy</td>
+                    <td class="best content" id="best-time-easy"></td>
+                    <td class="best content" id="best-player-easy"></td>
+                </tr>
+                <tr>
+                    <td class="best level">Intermediate</td>
+                    <td class="best content" id="best-time-intermediate"></td>
+                    <td class="best content" id="best-player-intermediate"></td>
+                </tr>
+                <tr>
+                    <td class="best level">Hard</td>
+                    <td class="best content" id="best-time-hard"></td>
+                    <td class="best content" id="best-player-hard"></td>
+                </tr>
+                <tr>
+                    <td class="best level">Hardgcore</td>
+                    <td class="best content" id="best-time-hardcore"></td>
+                    <td class="best content" id="best-player-hardcore"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- just a fency end modal -->
+    <div id="end-modal-container" class="end-modal-container hide modal">
+        <p class="message endMsg">Game Over</p>
+        <input id="player-name" type="text" class="input-name" placeholder="Enter Your Name">
+        <br>
+        <h2> Play Again?</h2>
+        <button class="btn" onclick="initGame()">Yes</button>
+        <button onclick="nextLevel()" class="btn">Next Level</button>
+    </div>
+
+    <h5>Created by Shai L</h5>
+    <h5>Version : Sprint 1 Day 3</h5>
+    <script src="js/util.js"></script>
+    <script src="js/minesweeper.js"></script>
+</body>
+
+</html>
+
+
+

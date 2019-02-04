@@ -1,0 +1,498 @@
+/* body {
+    background-color: black;
+} */
+
+h1 ,h5 {
+    color: whitesmoke;
+    text-emphasis: bold;
+    text-align: center;
+    font-family: monospace;
+}
+
+/* .time {
+    display: block;
+    height: 30px;
+} */
+
+.hidden {
+    visibility: hidden;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(51, 47, 47);
+    border: 15px solid rgb(51, 47, 47);
+}
+ 
+
+
+ul li {
+    margin-top: 10px;
+    align-content: left;
+    display: inline;
+    padding: 0x 50px;
+    float: left;
+    display: block;
+    color: black;
+    background-color: gray;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+}
+
+.smiley {
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+    cursor: pointer;
+}
+.cell {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+}
+
+
+.board-table {
+    border: 15px solid #c0c0c0;
+    border-radius: 1px;
+    padding: 0px;
+    outline: 1px solid white;
+    border-collapse: collapse;
+    display: flex; 
+    max-width:100%;
+    white-space:nowrap;
+}
+
+
+.num {
+    font-weight: bold;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+}
+
+
+
+.board td {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    transition: .5s;
+    background-color: lightgray;
+ 
+    text-align: center;
+    box-sizing: content-box;
+    padding: 0px;
+}
+
+.end-modal-container {
+    position: absolute;
+    width: 600px;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    vertical-align: middle;
+    text-align: center;
+    display: block;
+    z-index: 2;
+}
+
+
+
+.end-modal {
+    position: absolute;
+    width: flex;
+    border-radius: 16px;
+    padding: 20px;
+    border: 1px solid gray;
+    position: absolute;
+    background-color: antiquewhite;
+    opacity: 0.95;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    vertical-align: middle;
+    text-align: center;
+}
+
+
+
+.mine {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+}
+
+
+.cover {
+    position: absolute;
+    box-sizing: border-box;
+    top:0;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+
+.smiley-container {
+    border-radius: 200px;
+    background-color: white;
+}
+
+/* 
+.blur {
+    filter: blur(1px);
+}
+   */
+
+.timer, .mines {
+    background-color: rgb(51, 47, 47);
+    /* min-width: 100px; */
+    text-align: center;
+    vertical-align: middle;
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 25px;
+}
+
+
+.show {
+    z-index: 1;
+    display: block;
+    width: fit-content;
+    height: fit-content;
+}
+
+.mark {
+    position: absolute;
+    box-sizing: border-box;
+}
+
+.hide {
+    display: none;
+}
+
+
+.board-container {
+    text-align: center;
+}
+
+.board-inner-container {
+    display: inline-block;
+}
+
+.header-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header-inner-container {
+    display: inline-block;
+}
+
+
+
+
+/* Dropdown Button */
+.dropbtn , .play-again {
+    border-radius: 5px;
+    background-color: transparent;
+    color: rgba(44, 37, 37, 0.651);
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid rgba(44, 37, 37, 0.651);
+    cursor: pointer;
+  }
+  
+  /* Dropdown button on hover & focus */
+  .dropbtn:hover, .dropbtn:focus {
+    background-color: whitesmoke;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    font-size: 14px;
+    display: none;
+    position: absolute;
+    text-align: left;
+    background-color: #f1f1f1;
+    min-width: 300px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 3;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown-content div {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content div:hover {background-color: #ddd}
+  
+
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #ddd}
+  
+  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show-drop-down-menu {display:block;}
+
+
+h2 , h3, div{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    color: black;
+}
+
+
+
+.best-results-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.best-results {
+    width: 400px;
+    display: inline-block;
+}
+
+  
+.best  { 
+    padding: 10px 30px 10px 8px;
+    list-style: none;
+    background-color: gray;
+    /* color:gold; */
+    /* max-width:100%; */
+    white-space:nowrap;
+    border-collapse:collapse;
+    border-spacing:0;
+    margin-top: 30px;
+    /* margin-left: 730px; */
+    margin-top: 45px;
+    text-align: left;
+}
+
+.best td {
+    font-family:Arial, sans-serif;
+    font-size:14px;
+    padding:10px 5px;
+    border-style:solid;
+    border-width:1px;
+    overflow:hidden;
+    word-break:normal;
+    border-color:black;
+}
+
+.best th {
+    color: saddlebrown;
+    font-family:Arial, sans-serif;
+    font-size:14px;
+    font-weight:normal;
+    padding:10px 5px;
+    border-style:solid;
+    border-width:1px;
+    overflow:hidden;
+    word-break:normal;
+    border-color:black;
+}
+
+.best .level {
+    color: saddlebrown;
+    font-size:16px;
+    font-family:Arial, Helvetica, sans-serif ;
+    border-color:inherit;
+    text-align:left
+}
+
+.best .title {
+    font-size:16px;
+    font-family:Impact, Charcoal, sans-serif ;
+    background-color:#f4ae30;
+    color:#ffffff;
+    border-color:inherit;
+    text-align:left
+}
+
+.best .content {
+    color: saddlebrown;
+    font-weight:normal;
+    font-size:16px;
+    font-family:Arial, Helvetica, sans-serif, Charcoal, sans-serif ;
+    border-color:inherit;
+    text-align:left
+}
+
+.best .title {
+    font-size:16px;
+    font-family:Impact, Charcoal, sans-serif ;
+    background-color:#f4ae30;
+    color:#ffffff;
+    border-color:inherit;
+    text-align:center
+}
+
+
+
+@import url(https://fonts.googleapis.com/css?family=Oswald:400|Open+Sans:700);
+
+@import url(http://weloveiconfonts.com/api/?family=fontawesome);
+
+/* fontawesome */
+[class*="fontawesome-"]:before {
+  font-family: 'FontAwesome', sans-serif;
+}
+
+body {
+  background: #e6e6d8 url('https://dl.dropboxusercontent.com/s/t0gu051d08sei65/bg-retro-noise.png');
+  color: #121212;
+}
+
+section.page-title {
+  width: 100%;
+  min-width: 800px;
+  text-align: center;
+  margin-top: 90px;
+  /* margin-bottom: 30px; */
+}
+
+h1, h3 {
+  transform: matrix(1, -0.20, 0, 1, 0, 0);
+  -ms-transform: matrix(1, -0.20, 0, 1, 0, 0);
+  -webkit-transform: matrix(1, -0.20, 0, 1, 0, 0);
+}
+
+h1 {
+  font-family: "Oswald", Sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 70px;
+  text-shadow: 4px 5px #e6e6d8, 6px 7px #c6a39a;
+}
+
+h1 span {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+span.star {
+  font-size: 20px;
+}
+
+h3 {
+  font-family: "Open Sans", Sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 0.1em;
+  margin-bottom: 10px;  
+  position: relative;
+}
+
+h3:before, h3:after {
+  content: " ";
+  position: absolute;
+  width: 100px;
+  height: 4px;
+  border-top: 2px solid #121212;
+  border-bottom: 2px solid #121212;
+}
+
+h3:before {
+  margin: 5px 0 0 -110px;
+}
+
+h3:after {
+  margin: 5px 0 0 10px;
+}
+
+
+
+
+
+/* fancy popup */
+
+
+.modal {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    /* display: inline-flex; */
+    flex-direction: column;
+    align-items: center;
+    padding: 1.6rem 3rem;
+    border: 3px solid black;
+    border-radius: 5px;
+    background: white;
+    box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+  .message {
+    font-size:1.1rem;
+    margin-bottom: 1.6rem;
+    margin-top: 0;
+  }
+  .btn {
+    color:inherit;
+    font-family:inherit;
+    font-size: inherit;
+    background: white;
+    padding: 0.3rem 3.4rem;
+    border: 3px solid black;
+    margin-right: 2.6rem;
+    box-shadow: 0 0 0 black;
+    transition: all 0.2s;
+  }
+  
+  .btn:last-child {
+    margin: 0;
+  }
+  
+  .btn:hover {
+    box-shadow: 0.4rem 0.4rem 0 black;
+    transform: translate(-0.4rem, -0.4rem);
+  }
+  
+  .btn:active {
+    box-shadow: 0 0 0 black;
+    transform: translate(0, 0);
+  }
+  
+  .input-name {
+    color:inherit;
+    font-family:inherit;
+    font-size: inherit;
+    background: white;
+    padding: 0.3rem 3.4rem;
+    border: 3px solid black;
+    margin-right: 2.6rem;
+    box-shadow: 0 0 0 black;
+    /* transition: all 0.2s; */
+  }
+  
